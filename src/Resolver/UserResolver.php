@@ -1,23 +1,23 @@
 <?php
 
 
-namespace App\Manager;
+namespace App\Resolver;
 
 
 use App\Document\User;
 use Doctrine\ODM\MongoDB\DocumentManager;
 
 
-class UserManager
+class UserResolver
 {
     /**
-     * @var DocumentManager
+     * @var DocumentResolver
      */
     private $dm ;
 
     /**
-     * UserManager constructor.
-     * @param DocumentManager $dm
+     * UserResolver constructor.
+     * @param DocumentResolver $dm
      */
     public function __construct(DocumentManager $dm)
     {

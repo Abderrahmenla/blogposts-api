@@ -21,7 +21,7 @@ class Post
     protected string $id;
 
     /**
-     *@MongoDB\ReferenceOne(targetDocument=User::class)
+     *@MongoDB\ReferenceOne(targetDocument=User::class,storeAs="userId")
      */
     private $user;
 
@@ -102,35 +102,4 @@ class Post
 
     public function getComments(): ArrayCollection { return $this->comments; }
     public function addComment(Comment $comment): void { $this->comments[] = $comment; }
-}
-
-/** @MongoDB\EmbeddedDocument */
-class Comment
-{
-   /**
-     *@MongoDB\ReferenceOne(targetDocument=User::class)
-     */
-  private $creatorId;
-
-    /** @MongoDB\Field(type="string") */
-    private $creatorName;
-
-    /** @MongoDB\Field(type="string") */
-    private $content;
-
-    /** @MongoDB\Field(type="string") */
-    private $creationDate;
-
-    public function getCreatorId(): ?string { return $this->creatorId; }
-    public function setCreatorId(string $creatorId): void { $this->creatorId = $creatorId; }
-
-    public function getCreatorName(): ?string { return $this->creatorName; }
-    public function setCreatorName(string $creatorName): void { $this->creatorName = $creatorName; }
-
-    public function getContent(): ?string { return $this->content; }
-    public function setContent(string $content): void { $this->content = $content; }
-    
-    public function getCreationDate(): ?string { return $this->creationDate; }
-    public function setCreationDate(string $creationDate): void { $this->creationDate = $creationDate; }
-
 }

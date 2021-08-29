@@ -1,12 +1,9 @@
 <?php
 
-
-namespace App\Manager;
-
+namespace App\Resolver;
 
 use App\Document\Post;
 use Doctrine\ODM\MongoDB\DocumentManager;
-
 
 class PostManager
 {

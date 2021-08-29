@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 class UserService
 {
   /**
-   * @var UserManager $usermanager
+   * @var UserManager
    */
 
    private $userManager;
@@ -21,7 +21,7 @@ class UserService
    private $logger;
 
    /**
-    * @var Serializer $serializer
+    * @var Serializer
     */
   private $serializer;
 

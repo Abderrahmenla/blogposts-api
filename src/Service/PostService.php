@@ -29,7 +29,7 @@ class PostService
 
     /**
      * PostService constructor.
-     * @param PostManager $postManager
+     * @param PostManager
      */
     public function __construct(PostManager $postManager)
     {
